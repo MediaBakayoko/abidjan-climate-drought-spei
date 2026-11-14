@@ -70,9 +70,15 @@ statistiquement cohérents (années de sécheresse réelles identifiées).
 une humidité croissante et quasi continue, avec des précipitations totales
 dépassant 2000 mm/an à partir de 2022.
 
-## Cartes
-- `maps/spei_<année>.png` / `.tif` — carte SPEI par année, échelle -2 à
-  +2, palette rouge (sec) → vert (humide).
+## Visuels
+- `maps/spei_<année>.png` — fiche-valeur par année (indice SPEI, statut,
+  position sur l'échelle, chiffres réels de précipitation/ETP/bilan).
+  Remplace une première version en carte spatiale continue : la
+  résolution native des données (CHIRPS ~5,5 km, ERA5-Land ~9-11 km) ne
+  produit que 10×9 pixels sur cette zone, insuffisant pour un rendu
+  cartographique crédible — une fiche-valeur nette et honnête sur le
+  niveau de détail réel disponible est préférable à une carte lissée
+  artificiellement.
 - `maps/serie_temporelle_spei.png` — graphique en barres de l'évolution
   du SPEI moyen zone, 2015-2025.
 
@@ -94,9 +100,9 @@ dépassant 2000 mm/an à partir de 2022.
   +3,64 ne doit pas être cité comme une valeur SPEI calibrée précise.**
 - **Résolution spatiale grossière** : CHIRPS (~5,5 km) et ERA5-Land
   (~9-11 km) produisent une grille de seulement 10×9 pixels sur cette
-  zone. Les cartes sont lissées visuellement (interpolation bilinéaire)
-  pour la lisibilité, mais ne montrent aucune variation fine
-  infra-urbaine — à l'échelle de l'agglomération seulement.
+  zone — insuffisant pour une carte infra-urbaine fiable. C'est pourquoi
+  les résultats sont présentés en fiches-valeur par année (moyenne
+  zonale) plutôt qu'en carte spatiale continue.
 - **Standardisation spatiale non pixel-par-pixel** : la même fonction de
   standardisation (ajustée sur la moyenne zonale) est appliquée à chaque
   pixel, faute de série de référence suffisamment longue par pixel sur
