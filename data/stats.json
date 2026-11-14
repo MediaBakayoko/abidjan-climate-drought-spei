@@ -1,0 +1,128 @@
+{
+  "zone_etude": "District d'Abidjan, Cote d'Ivoire",
+  "bbox": [
+    [
+      -4.2,
+      5.2
+    ],
+    [
+      -3.8,
+      5.55
+    ]
+  ],
+  "periode_analyse": "2015-2025 (annee complete Jan-Dec)",
+  "periode_reference_climatologie": "2010-2019",
+  "sources": {
+    "precipitation": "UCSB-CHG/CHIRPS/DAILY",
+    "evapotranspiration": "ECMWF/ERA5_LAND/DAILY_AGGR (total_evaporation_sum, proxy ETP reelle)"
+  },
+  "methode_spei": "Distribution logistique generalisee (GLO) ajustee par L-moments (package lmoments3, formules de Hosking 1990) sur la serie de reference, standardisation par CDF -> z-score normal (Vicente-Serrano et al. 2010)",
+  "parametres_distribution_reference": {
+    "k": 0.12422273365595585,
+    "loc": 275.2604096184386,
+    "scale": 135.60482267133165
+  },
+  "bilan_hydrique_reference_2010_2019_mm": [
+    519.3905570076713,
+    405.33847336638837,
+    235.06919779308933,
+    -158.2188625521319,
+    469.52642550579066,
+    92.91053984873574,
+    13.566751952365363,
+    503.55775291803945,
+    74.63608728030735,
+    314.73089786698506
+  ],
+  "resultats_annuels": [
+    {
+      "annee": 2015,
+      "precipitation_totale_mm": 1437.7,
+      "evapotranspiration_totale_mm": 1358.8,
+      "bilan_hydrique_mm": 92.9,
+      "spei": -0.76,
+      "categorie": "normal"
+    },
+    {
+      "annee": 2016,
+      "precipitation_totale_mm": 1334.0,
+      "evapotranspiration_totale_mm": 1338.6,
+      "bilan_hydrique_mm": 13.6,
+      "spei": -1.03,
+      "categorie": "secheresse_moderee"
+    },
+    {
+      "annee": 2017,
+      "precipitation_totale_mm": 1861.0,
+      "evapotranspiration_totale_mm": 1373.8,
+      "bilan_hydrique_mm": 503.6,
+      "spei": 1.12,
+      "categorie": "humide"
+    },
+    {
+      "annee": 2018,
+      "precipitation_totale_mm": 1446.1,
+      "evapotranspiration_totale_mm": 1389.7,
+      "bilan_hydrique_mm": 74.6,
+      "spei": -0.83,
+      "categorie": "normal"
+    },
+    {
+      "annee": 2019,
+      "precipitation_totale_mm": 1672.3,
+      "evapotranspiration_totale_mm": 1383.7,
+      "bilan_hydrique_mm": 314.7,
+      "spei": 0.19,
+      "categorie": "normal"
+    },
+    {
+      "annee": 2020,
+      "precipitation_totale_mm": 1860.0,
+      "evapotranspiration_totale_mm": 1354.9,
+      "bilan_hydrique_mm": 534.0,
+      "spei": 1.27,
+      "categorie": "humide"
+    },
+    {
+      "annee": 2021,
+      "precipitation_totale_mm": 1731.0,
+      "evapotranspiration_totale_mm": 1415.5,
+      "bilan_hydrique_mm": 342.4,
+      "spei": 0.32,
+      "categorie": "normal"
+    },
+    {
+      "annee": 2022,
+      "precipitation_totale_mm": 1954.8,
+      "evapotranspiration_totale_mm": 1344.1,
+      "bilan_hydrique_mm": 628.3,
+      "spei": 1.74,
+      "categorie": "tres_humide"
+    },
+    {
+      "annee": 2023,
+      "precipitation_totale_mm": 2317.7,
+      "evapotranspiration_totale_mm": 1336.2,
+      "bilan_hydrique_mm": 1005.9,
+      "spei": 3.64,
+      "categorie": "tres_humide"
+    },
+    {
+      "annee": 2024,
+      "precipitation_totale_mm": 1736.6,
+      "evapotranspiration_totale_mm": 1316.9,
+      "bilan_hydrique_mm": 434.8,
+      "spei": 0.78,
+      "categorie": "normal"
+    },
+    {
+      "annee": 2025,
+      "precipitation_totale_mm": 2087.7,
+      "evapotranspiration_totale_mm": 1284.4,
+      "bilan_hydrique_mm": 823.6,
+      "spei": 2.69,
+      "categorie": "tres_humide"
+    }
+  ],
+  "avertissement_methodologique": "ERA5-Land total_evaporation_sum est l'evapotranspiration reelle (limitee par l'eau disponible), pas l'evapotranspiration potentielle (PET) utilisee dans le SPEI original -- utilisee ici comme proxy faute de produit PET direct fiable sur GEE pour cette zone. La distribution de reference (GLO, L-moments) est ajustee sur seulement 10 annees (2010-2019) -- echantillon court pour calibrer fiablement les valeurs extremes (SPEI tres eleve/bas peu fiable en valeur absolue, la tendance relative entre annees reste interpretable). La carte spatiale applique la meme fonction de standardisation (ajustee sur la moyenne zonale) a chaque pixel -- ce n'est pas un ajustement pixel par pixel independant, limite assumee faute de serie de reference suffisamment longue par pixel."
+}
